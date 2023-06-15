@@ -1,13 +1,14 @@
 import React from 'react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import TextBlock from './Textblock'
+import TextBlock1 from './Textblock1'
+import TextBlock2 from './Textblock2'
 
 import './App.css'
 
 export default function App() {
   return (
     <div className="App">
-      <Parallax pages={2} style={{ top: '0', left: '0' }} class="animation">
+      <Parallax pages={3} style={{ top: '0', left: '0' }} class="animation">
         <ParallaxLayer offset={0} speed={0.25}>
           <div class="animation_layer parallax" id="artback"></div>
         </ParallaxLayer>
@@ -36,7 +37,10 @@ export default function App() {
           <div class="animation_layer parallax" id="jungle5"></div>
         </ParallaxLayer>
         <ParallaxLayer offset={1} speed={0.25}>
-          <TextBlock />
+          <TextBlock1 />
+        </ParallaxLayer>
+        <ParallaxLayer offset={2} speed={0.35}>
+          <TextBlock2 />
         </ParallaxLayer>
       </Parallax>
     </div>
